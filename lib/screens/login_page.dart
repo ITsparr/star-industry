@@ -6,7 +6,7 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xFFFF6600), // UC-inspired Orange Background
       body: SingleChildScrollView(
         // Makes the page scrollable if content overflows
         padding: const EdgeInsets.all(16.0),
@@ -14,7 +14,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Company name at the top for branding (without star icon)
+            // Company name at the top for branding
             const Center(
               child: Column(
                 children: [
@@ -27,7 +27,7 @@ class LoginPage extends StatelessWidget {
                       fontStyle:
                           FontStyle.italic, // Slanted (italic) font style
                       letterSpacing: 1.5, // Adds spacing between letters
-                      color: Colors.blue,
+                      color: Colors.white, // White color for text
                     ),
                   ),
                   SizedBox(height: 70), // Adds space after the name
@@ -41,22 +41,25 @@ class LoginPage extends StatelessWidget {
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 5),
             const Text(
               'Please log in to your account',
-              style: TextStyle(fontSize: 16, color: Colors.black54),
+              style: TextStyle(fontSize: 16, color: Colors.white70),
             ),
             const SizedBox(height: 15),
 
             // Email text field
             const TextField(
               decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
                 labelText: 'Email',
+                labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.email),
+                prefixIcon: Icon(Icons.email, color: Colors.black),
               ),
             ),
             const SizedBox(height: 10),
@@ -65,9 +68,12 @@ class LoginPage extends StatelessWidget {
             const TextField(
               obscureText: true, // Hides the text for password
               decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
                 labelText: 'Password',
+                labelStyle: TextStyle(color: Colors.black),
                 border: OutlineInputBorder(),
-                prefixIcon: Icon(Icons.lock),
+                prefixIcon: Icon(Icons.lock, color: Colors.black),
               ),
             ),
             const SizedBox(height: 20),
@@ -78,7 +84,9 @@ class LoginPage extends StatelessWidget {
                 // Handle login logic here
               },
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.white,
+                foregroundColor:
+                    const Color(0xFFFF6600), // UC Orange text color
                 minimumSize:
                     const Size(double.infinity, 50), // Full-width button
               ),
@@ -97,7 +105,7 @@ class LoginPage extends StatelessWidget {
                 },
                 child: const Text(
                   "Don't have an account? Sign up",
-                  style: TextStyle(color: Colors.blue),
+                  style: TextStyle(color: Colors.white),
                 ),
               ),
             ),

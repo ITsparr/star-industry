@@ -19,7 +19,7 @@ class SplashScreenState extends State<SplashScreen>
     super.initState();
 
     _controller = AnimationController(
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 1),
       vsync: this,
     );
     _animation = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
@@ -57,12 +57,12 @@ class SplashScreenState extends State<SplashScreen>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: const Color(0xFFFF6600), // UC-inspired Orange Background
       body: Center(
         child: FadeTransition(
           opacity: _animation,
           child: const Text(
-            'Star Technology',
+            'Sparrow',
             style: TextStyle(
               fontSize: 32, // Larger text size
               fontWeight: FontWeight.w600, // Semi-bold font weight
