@@ -28,17 +28,23 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       // Conditional AppBar: Only show AppBar when on Home (index 0)
-      appBar: _currentIndex == 0 // Check if we're on the Home page
+      appBar: _currentIndex == 0
+          // Check if we're on the Home page
           ? AppBar(
               backgroundColor: const Color(0xFFFF6600), // UC Orange
-              elevation: 0,
+              elevation: 4.0,
               leading: Builder(
                 builder: (context) => IconButton(
-                  icon: const Icon(CupertinoIcons.bars),
+                  icon: const Icon(CupertinoIcons.bars,
+                      color: Colors.white), // Set icon color to white
                   onPressed: () {
                     Scaffold.of(context).openDrawer();
                   },
                 ),
+              ),
+              title: const Text(
+                'Sparrow', // Title added here
+                style: TextStyle(color: Colors.white),
               ),
             )
           : null, // If not on Home, set AppBar to null (hide it)
