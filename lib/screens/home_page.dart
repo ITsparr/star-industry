@@ -5,6 +5,7 @@ import 'package:flutter_application_1/element/bottom_navgation_item/chat_page_co
 import 'package:flutter_application_1/element/bottom_navgation_item/home_page_content.dart';
 import 'package:flutter_application_1/element/bottom_navgation_item/my_company_page_content.dart';
 import 'package:flutter_application_1/element/bottom_navgation_item/my_network_page_content.dart';
+import 'package:flutter_application_1/element/bottom_navgation_item/make_video_page_content.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = [
     const HomePageContent(),
     const MyNetworkPageContent(),
+    const MakeVideoPageContent(),
     const MyCompanyPageContent(),
     const ChatPageContent(),
   ];
@@ -29,7 +31,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       // Conditional AppBar: Only show AppBar when on Home (index 0)
       appBar: _currentIndex == 0
-          // Check if we're on the Home page
           ? AppBar(
               backgroundColor: const Color(0xFFFF6600), // UC Orange
               elevation: 4.0,
@@ -43,8 +44,12 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
               title: const Text(
-                'Sparrow', // Title added here
-                style: TextStyle(color: Colors.white),
+                'Sparrow',
+                style: TextStyle(
+                  fontFamily: 'Caramel', // Custom font
+                  fontSize: 50, // Font size
+                  color: Colors.white, // Font color
+                ),
               ),
             )
           : null, // If not on Home, set AppBar to null (hide it)
@@ -74,6 +79,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.person_2),
             label: 'Network',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(CupertinoIcons.video_camera),
+            label: 'Make Video', // New item
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.building_2_fill),

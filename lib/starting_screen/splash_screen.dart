@@ -64,11 +64,9 @@ class SplashScreenState extends State<SplashScreen>
           child: const Text(
             'Sparrow',
             style: TextStyle(
-              fontSize: 32, // Larger text size
-              fontWeight: FontWeight.w600, // Semi-bold font weight
-              fontStyle: FontStyle.italic, // Slanted (italic) font style
-              letterSpacing: 1.5, // Adds spacing between letters
-              color: Colors.white,
+              fontFamily: 'Caramel', // Custom font
+              fontSize: 50, // Font size
+              color: Colors.white, // Font color
             ),
           ),
         ),

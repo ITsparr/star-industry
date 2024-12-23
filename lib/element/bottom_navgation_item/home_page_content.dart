@@ -86,7 +86,7 @@ class HomePageContent extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(vertical: 8.0),
                   elevation: 5,
                   child: ListTile(
-                    leading: Icon(Icons.account_balance_wallet),
+                    leading: const Icon(Icons.account_balance_wallet),
                     title: const Text('Your Money'),
                     subtitle: const Text('Manage your account balance'),
                     trailing: const Icon(Icons.arrow_forward),
@@ -101,7 +101,7 @@ class HomePageContent extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(vertical: 8.0),
                   elevation: 5,
                   child: ListTile(
-                    leading: Icon(Icons.show_chart),
+                    leading: const Icon(Icons.show_chart),
                     title: const Text('Shares'),
                     subtitle: const Text('View and manage your stocks'),
                     trailing: const Icon(Icons.arrow_forward),
@@ -116,7 +116,7 @@ class HomePageContent extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(vertical: 8.0),
                   elevation: 5,
                   child: ListTile(
-                    leading: Icon(Icons.attach_money),
+                    leading: const Icon(Icons.attach_money),
                     title: const Text('Funding'),
                     subtitle: const Text('Add funds to your account'),
                     trailing: const Icon(Icons.arrow_forward),
