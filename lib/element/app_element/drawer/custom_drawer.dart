@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/element/app_element/drawer_element/about/about_page.dart';
+import 'package:flutter_application_1/element/app_element/drawer_element/logout/logout_page.dart';
+import 'package:flutter_application_1/element/app_element/drawer_element/profile/profile_page.dart';
+import 'package:flutter_application_1/element/app_element/drawer_element/setting/settings_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -40,14 +44,22 @@ class CustomDrawer extends StatelessWidget {
                   leading: const Icon(CupertinoIcons.person),
                   title: const Text('Profile'),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ProfilePage()),
+                    );
                   },
                 ),
                 ListTile(
                   leading: const Icon(CupertinoIcons.settings),
                   title: const Text('Settings'),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SettingsPage()),
+                    );
                   },
                 ),
                 const Divider(), // Adds a separator
@@ -55,14 +67,22 @@ class CustomDrawer extends StatelessWidget {
                   leading: const Icon(CupertinoIcons.info_circle),
                   title: const Text('About'),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const AboutPage()),
+                    );
                   },
                 ),
                 ListTile(
                   leading: const Icon(CupertinoIcons.square_arrow_right),
                   title: const Text('Logout'),
                   onTap: () {
-                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const LogoutPage()),
+                    );
                   },
                 ),
               ],

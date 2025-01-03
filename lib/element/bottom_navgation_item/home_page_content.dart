@@ -16,11 +16,12 @@ class HomePageContent extends StatelessWidget {
             decoration: BoxDecoration(
               color: Colors.white, // Box background color
               borderRadius: BorderRadius.circular(12.0), // Rounded corners
-              boxShadow: [
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.1), // Subtle shadow color
+                  color:
+                      Color.fromARGB(255, 209, 166, 166), // Subtle shadow color
                   blurRadius: 10, // Blur effect
-                  offset: const Offset(0, 5), // Position of shadow
+                  offset: Offset(0, 5), // Position of shadow
                 ),
               ],
             ),

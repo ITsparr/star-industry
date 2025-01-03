@@ -5,6 +5,20 @@ class ChatPageContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Simulated online/offline statuses
+    final List<bool> onlineStatuses = [
+      true,
+      false,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      false,
+      true
+    ];
+
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFF6600), // UC Orange
@@ -20,23 +34,37 @@ class ChatPageContent extends StatelessWidget {
         centerTitle: true, // Center title alignment
       ),
       body: ListView.builder(
-        itemCount: 10, // Placeholder for 10 items
+        itemCount: onlineStatuses.length, // Number of friends
         itemBuilder: (context, index) {
           return ListTile(
-            leading: const CircleAvatar(
-              radius: 30,
-              backgroundImage: NetworkImage(
-                'https://via.placeholder.com/150', // Placeholder profile image
-              ),
+            leading: Stack(
+              children: [
+                const CircleAvatar(
+                  radius: 30,
+                  backgroundImage: NetworkImage(
+                    'https://via.placeholder.com/150', // Placeholder profile image
+                  ),
+                ),
+                Positioned(
+                  bottom: 0,
+                  right: 0,
+                  child: CircleAvatar(
+                    radius: 8,
+                    backgroundColor:
+                        onlineStatuses[index] ? Colors.green : Colors.red,
+                  ),
+                ),
+              ],
             ),
             title: Text(
               'Friend ${index + 1}', // Placeholder friend name
               style: const TextStyle(fontWeight: FontWeight.bold),
             ),
             subtitle: Text(
-              'Last message from Friend ${index + 1}', // Placeholder last message
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+              onlineStatuses[index] ? 'Online' : 'Offline', // Status text
+              style: TextStyle(
+                color: onlineStatuses[index] ? Colors.green : Colors.red,
+              ),
             ),
             trailing: Text(
               '10:${index}0 AM', // Placeholder time

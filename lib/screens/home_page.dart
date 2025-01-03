@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_application_1/element/app_element/custom_drawer.dart';
+import 'package:flutter_application_1/element/app_element/drawer/custom_drawer.dart';
 import 'package:flutter_application_1/element/bottom_navgation_item/chat_page_content.dart';
 import 'package:flutter_application_1/element/bottom_navgation_item/home_page_content.dart';
 import 'package:flutter_application_1/element/bottom_navgation_item/my_company_page_content.dart';
@@ -73,8 +73,8 @@ class _HomePageState extends State<HomePage> {
         type: BottomNavigationBarType.fixed,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
-            label: 'Home',
+            icon: Icon(CupertinoIcons.money_dollar),
+            label: 'Account',
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.person_2),
