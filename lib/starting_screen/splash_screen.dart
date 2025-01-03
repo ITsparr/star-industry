@@ -64,7 +64,7 @@ class SplashScreenState extends State<SplashScreen>
           child: const Text(
             'Sparrow',
             style: TextStyle(
-              fontFamily: 'Caramel', // Custom font
+              fontFamily: 'Roboto', // Custom font
               fontSize: 50, // Font size
               color: Colors.white, // Font color
             ),
